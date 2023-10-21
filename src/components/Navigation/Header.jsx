@@ -1,5 +1,11 @@
+import ThemeSwitcher from "../Theme/ThemeSwitcher";
+
 function Header() {
-  return <div>Header</div>;
+  return (
+    <div>
+      <ThemeSwitcher />
+    </div>
+  );
 }
 
 export default Header;
