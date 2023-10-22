@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Navigation/Header";
 import Footer from "@/components/Navigation/Footer";
 import { ThemeProvider } from "@/Providers/ThemeProvider";
+import QueryProvider from "@/Providers/QueryProvider";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -20,16 +21,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          <main>{children}</main>
-          {/* <Footer /> */}
-        </ThemeProvider>
+        <QueryProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            <main>{children}</main>
+            {/* <Footer /> */}
+          </ThemeProvider>
+        </QueryProvider>
       </body>
     </html>
   );
