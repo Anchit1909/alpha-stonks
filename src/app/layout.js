@@ -4,12 +4,14 @@ import Header from "@/components/Navigation/Header";
 import Footer from "@/components/Navigation/Footer";
 import { ThemeProvider } from "@/Providers/ThemeProvider";
 
+
 const poppins = Poppins({
   variable: "--font-poppins",
   weight: ["400", "600", "700"],
   subsets: ["latin"],
   display: "swap",
 });
+
 
 export const metadata = {
   title: "Groww Stonks",
