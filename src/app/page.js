@@ -21,7 +21,7 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-      <TabsContainer />
+      <V2TabsContainer />
     </main>
   );
 }
