@@ -20,7 +20,7 @@
   <a href="#introduction"><strong>Introduction</strong></a> ·
   <a href="#how-it-works"><strong>How It Works</strong></a> ·
   <a href="#tech-stack"><strong>Tech Stack</strong></a> ·
-  <a href="#screenshots"><strong>Screenshots/strong></a> ·
+  <a href="#screenshots"><strong>Screenshots</strong></a> ·
   <a href="#running-locally"><strong>Running Locally</strong></a> ·
   <a href="#author"><strong>Author</strong></a>
 </p>
@@ -51,10 +51,24 @@ GrowwStonks is an online platform for stock market data. It shows top-performing
 
 ## Screenshots
 
+### Home Page
+
 <img alt="Home Page" src="/public/HomePage.png">
+
+### Company Details Page
+
 <img alt="Company Details Page" src="/public/CompanyDetails.png">
+
+### Line Chart
+
 <img alt="Line Chart" src="/public/LineChart.png">
+
+### Area Chart
+
 <img alt="Area Chart" src="/public/AreaChart.png">
+
+### Search Functionality
+
 <img alt="Search Functionality" src="/public/Search.png">
 
 ## Running Locally
