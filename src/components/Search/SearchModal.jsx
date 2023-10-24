@@ -182,7 +182,7 @@ function SearchModal() {
                 })}
             </div>
           )}
-          <div className="flex gap-2 mb-2 flex-col p-3">
+          {/* <div className="flex gap-2 mb-2 flex-col p-3">
             <span className="text-sm font-medium">Top Companies</span>
             <li
               className="w-full flex justify-between h-10 cursor-pointer hover:bg-secondary rounded-md p-2 items-center"
@@ -220,7 +220,7 @@ function SearchModal() {
               <TrendingUp className="mr-2 h-4 w-4" />
               <span>Tesla (TSLA)</span>
             </li>
-          </div>
+          </div> */}
         </div>
       </DialogContent>
     </Dialog>
