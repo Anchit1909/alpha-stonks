@@ -1,4 +1,5 @@
 import TabsContainer from "@/components/Home/TabsContainer";
+import V2TabsContainer from "@/components/Home/V2TabsContainer";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -20,6 +21,7 @@ export default function Home() {
           </div>
         </div>
       </div> */}
+      {/* <TabsContainer /> */}
       <TabsContainer />
     </main>
   );

@@ -1,4 +1,4 @@
-const stock = {
+export const stock = {
   metadata: "Top gainers, losers, and most actively traded US tickers",
   last_updated: "2023-10-20 16:15:58 US/Eastern",
   top_gainers: [
@@ -428,5 +428,3 @@ const stock = {
     },
   ],
 };
-
-export default stock;

@@ -15,18 +15,18 @@ import {
 import { ChartDataFormat } from "@/utils/ChartDataFormat";
 import { ChartFilter } from "@/utils/ChartFilter";
 import CompanyChartLoader from "../Preloader/CompanyChartLoader";
-// import { ChartData as StockChartRawData } from "@/data/Chart";
+import { ChartData as StockChartRawData } from "@/data/Chart";
 
-const CompanyChart = ({ Symbol }) => {
+const V2CompanyChart = ({ Symbol }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   const [day, setDay] = useState("1year");
   const [chartType, setChartType] = useState("LineChart");
-  const {
-    data: StockChartRawData,
-    isError,
-    isLoading,
-  } = useStockChartData(Symbol);
+  // const {
+  //   data: StockChartRawData,
+  //   isError,
+  //   isLoading,
+  // } = useStockChartData(Symbol);
 
   const seriesData = ChartDataFormat(
     StockChartRawData,
@@ -46,14 +46,9 @@ const CompanyChart = ({ Symbol }) => {
     return null;
   }
 
-  if (isError)
-    return (
-      <div className="mx-auto">
-        Some Error has occured. Please try after sometime.
-      </div>
-    );
+  // if (isError) return null;
 
-  if (isLoading) return <CompanyChartLoader />;
+  // if (isLoading) return <CompanyChartLoader />;
   return (
     <>
       <Card className="w-full p-4 ">
@@ -153,4 +148,4 @@ const CompanyChart = ({ Symbol }) => {
   );
 };
 
-export default CompanyChart;
+export default V2CompanyChart;
