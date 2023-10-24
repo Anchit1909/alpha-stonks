@@ -38,7 +38,10 @@ const GainerLoser = ({ data, value, isLoading }) => {
         <>
           {data?.map(
             ({ ticker, price, change_amount, change_percentage, volume }) => (
-              <CardContent className="dark:border-b-4 dark:border-black">
+              <CardContent
+                className="dark:border-b-4 dark:border-black"
+                key={ticker}
+              >
                 <div
                   className="flex justify-between items-center border-b dark:border-none dark:pt-6 h-10 px-2"
                   key={ticker}
