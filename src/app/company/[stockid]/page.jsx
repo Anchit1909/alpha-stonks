@@ -7,8 +7,8 @@ export default function page({ params }) {
     <div className="mx-auto w-full max-w-screen-xl px-2.5 md:px-20 py-10 relative gap-4 flex flex-col">
       {/* <CompanyChart Symbol={params.stockid} /> */}
       {/* <V2CompanyDetail TikerValue={params.stockid} /> */}
-      <V2CompanyChart Symbol={params.stockid} />
-      <V2CompanyDetail TikerValue={params.stockid} />
+      <CompanyChart Symbol={params.stockid} />
+      <CompanyDetail TikerValue={params.stockid} />
     </div>
   );
 }
