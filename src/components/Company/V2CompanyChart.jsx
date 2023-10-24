@@ -53,7 +53,7 @@ const V2CompanyChart = ({ Symbol }) => {
     <>
       <Card className="w-full p-4 relative">
         <div className="w-full flex justify-center flex-col gap-3 items-center">
-          <div className="absolute w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
+          <div className="absolute w-32 h-32 -top-8 bg-primary/30 rounded-full blur-3xl z-10"></div>
           <h1 className="text-xl font-bold">{Symbol} Chart</h1>
           <h1 className="text-xl font-bold">
             {chartType} (Past {day})

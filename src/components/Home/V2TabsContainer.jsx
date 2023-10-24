@@ -6,7 +6,7 @@ import { stock as GainerLoserData } from "@/data/Stock";
 const V2TabContainer = () => {
   return (
     <Tabs defaultValue="gainer" className="w-full relative">
-      <div className="absolute w-32 h-32 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute w-64 h-64 bg-primary/30 rounded-full blur-3xl -z-10"></div>
       <TabsList className="grid w-full sm:w-1/5 grid-cols-2">
         <TabsTrigger value="gainer">Gainers</TabsTrigger>
         <TabsTrigger value="loser">Losers</TabsTrigger>

@@ -8,14 +8,18 @@ const StockChart = ({ Symbol, FilteredStockData, ChartType }) => {
   const { theme } = useTheme();
   console.log(theme);
   const options = {
-    legend: "none",
+    legend: {
+      textStyle: {
+        color: theme === "dark" ? "#78716C" : "#A8A29E",
+      },
+    },
     animation: {
       duration: 1000, // Animation duration in milliseconds
       easing: "out", // Easing function
       startup: true, // Enable animation on startup
       trigger: "user", // Animation triggered by user interactions
     },
-    backgroundColor: theme === "dark" || "system" ? "#0C0A09" : "#FFFFFF",
+    backgroundColor: theme === "dark" ? "#0C0A09" : "#FFFFFF",
     hAxis: {
       textStyle: {
         color: theme === "dark" ? "#78716C" : "#A8A29E",

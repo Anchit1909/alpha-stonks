@@ -25,9 +25,10 @@ function Header() {
               className="flex z-40 font-semibold items-center gap-2"
             >
               <CandlestickChart className="text-primary" />
-              <span className={cn(clash.className, "text-xl")}>
-                Grow<span className="text-primary">w</span> Stonks.
-              </span>
+              <div className={cn(clash.className, "text-xl space-x-1")}>
+                <span>Groww Stonks</span>
+                <span className="text-primary">.</span>
+              </div>
             </Link>
             <MobileHeader />
             <div className="hidden items-center space-x-4 sm:flex">
