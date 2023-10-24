@@ -5,6 +5,8 @@ import { Input } from "../ui/input";
 import { CandlestickChart, Search } from "lucide-react";
 import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
+import { Button } from "../ui/button";
+import SearchModal from "../Search/SearchModal";
 
 const clash = localFont({
   src: "../../fonts/ClashDisplay-Variable.ttf",
@@ -29,11 +31,12 @@ function Header() {
             </Link>
             <MobileHeader />
             <div className="hidden items-center space-x-4 sm:flex">
-              <Input
+              {/* <Input
                 className=" relative w-96 pl-10 rounded-2xl"
                 placeholder="Search Stock & etfs"
               />
-              <Search className="absolute w-4 h-4" />
+              <Search className="absolute w-4 h-4" /> */}
+              <SearchModal />
             </div>
             <div className="hidden sm:block">
               <ThemeSwitcher />

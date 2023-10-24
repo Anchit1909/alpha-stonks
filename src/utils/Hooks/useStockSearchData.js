@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-export const useStockSearchInfo = (searchKey) => {
+export const useStockSearchData = (searchKey) => {
   const SECRET_KEY = process.env.NEXT_PUBLIC_ALPHA_API_KEY;
   const URL = ` ${"https://www.alphavantage.co/query?function="}${"SYMBOL_SEARCH"}&keywords=${searchKey}&apikey=${SECRET_KEY}`;
   return useQuery({
