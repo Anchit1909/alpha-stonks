@@ -35,7 +35,6 @@ function SearchModal() {
     setOpen(false);
     command();
   }, []);
-  // console.log("SearchModal", debouncedSearchTerm);
 
   return (
     <Dialog open={open} onOpenChange={(open) => setOpen(open)}>
