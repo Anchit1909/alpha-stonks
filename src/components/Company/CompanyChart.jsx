@@ -56,8 +56,9 @@ const CompanyChart = ({ Symbol }) => {
   if (isLoading) return <CompanyChartLoader />;
   return (
     <>
-      <Card className="w-full p-4 ">
+      <Card className="w-full p-4 relative">
         <div className="w-full flex justify-center flex-col gap-3 items-center">
+          <div className="absolute w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
           <h1 className="text-xl font-bold">{Symbol} Chart</h1>
           <h1 className="text-xl font-bold">
             {chartType} (Past {day})
