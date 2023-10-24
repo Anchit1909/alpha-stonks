@@ -1,9 +1,12 @@
+"use client";
+
 import { useTheme } from "next-themes";
 import React from "react";
 import Chart from "react-google-charts";
 
 const StockChart = ({ Symbol, FilteredStockData, ChartType }) => {
   const { theme } = useTheme();
+  console.log(theme);
   const options = {
     legend: "none",
     animation: {
@@ -12,7 +15,7 @@ const StockChart = ({ Symbol, FilteredStockData, ChartType }) => {
       startup: true, // Enable animation on startup
       trigger: "user", // Animation triggered by user interactions
     },
-    backgroundColor: theme === "dark" ? "#0C0A09" : "#FFFFFF",
+    backgroundColor: theme === "dark" || "system" ? "#0C0A09" : "#FFFFFF",
     hAxis: {
       textStyle: {
         color: theme === "dark" ? "#78716C" : "#A8A29E",
