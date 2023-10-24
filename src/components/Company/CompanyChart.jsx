@@ -59,27 +59,19 @@ const CompanyChart = ({ Symbol }) => {
       <Card className="w-full p-4 ">
         <div className="w-full flex justify-center flex-col gap-3 items-center">
           <h1 className="text-xl font-bold">{Symbol} Chart</h1>
-          <h1 className="text-xl font-bold"> Chart (Past {day})</h1>
+          <h1 className="text-xl font-bold">
+            {chartType} (Past {day})
+          </h1>
         </div>
         <StockChart
           Symbol={Symbol}
           FilteredStockData={FilteredStockData}
           ChartType={chartType}
         />
-        <div className=" flex flex-col sm:flex-row w-full mt-10 justify-between items-center gap-3">
+        <div className="flex flex-col sm:flex-row w-full mt-8 justify-between items-center gap-3">
           <div className="flex justify-center">
             <button
-              className={`p-2 shadow-md border rounded-l-md w-14 ${
-                day === "24hr"
-                  ? "bg-primary text-white"
-                  : "bg-secondary bg-opacity-50"
-              }`}
-              onClick={() => setDay("24hr")}
-            >
-              24hr
-            </button>
-            <button
-              className={`p-2 shadow-md border-r border-b border-t w-14 ${
+              className={`rounded-l-xl p-2 shadow-md border-r border-b border-t w-14 ${
                 day === "7days"
                   ? "bg-primary text-white"
                   : "bg-secondary bg-opacity-50"
@@ -120,7 +112,7 @@ const CompanyChart = ({ Symbol }) => {
               10y
             </button>
             <button
-              className={`p-2 shadow-md border-r border-b border-t rounded-r-md w-14 ${
+              className={`p-2 shadow-md border-r border-b border-t rounded-r-xl w-14 ${
                 day === "20years"
                   ? "bg-primary text-white"
                   : "bg-secondary bg-opacity-50"
