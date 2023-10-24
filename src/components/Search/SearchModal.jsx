@@ -68,7 +68,7 @@ function SearchModal() {
             <span className="text-sm font-medium">Filters</span>
             <div className="w-full flex gap-3">
               <Button
-                className={`h-8 px-4  ${
+                className={`h-8 px-4 hover:text-white  ${
                   selectFilter === "all"
                     ? "bg-primary text-white"
                     : "bg-white text-primary"
@@ -78,7 +78,7 @@ function SearchModal() {
                 <span>All</span>
               </Button>
               <Button
-                className={`h-8 px-4  ${
+                className={`h-8 px-4 hover:text-white   ${
                   selectFilter === "stock"
                     ? "bg-primary text-white"
                     : "bg-white text-primary"
@@ -88,7 +88,7 @@ function SearchModal() {
                 <span>Stocks</span>
               </Button>
               <Button
-                className={`h-8 px-4  ${
+                className={`h-8 px-4 hover:text-white   ${
                   selectFilter === "etf"
                     ? "bg-primary text-white"
                     : "bg-white text-primary"
@@ -98,7 +98,7 @@ function SearchModal() {
                 <span>ETF</span>
               </Button>
               <Button
-                className={`h-8 px-4  ${
+                className={`h-8 px-4 hover:text-white   ${
                   selectFilter === "Mutual Fund"
                     ? "bg-primary text-white"
                     : "bg-white text-primary"
