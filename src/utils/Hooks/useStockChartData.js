@@ -17,6 +17,6 @@ export const useStockChartData = (symbol) => {
 
       return data;
     },
-    staleTime: 5 * 60 * 1000,
+    staleTime: 5 * 60 * 1000, //5 Minutes
   });
 };

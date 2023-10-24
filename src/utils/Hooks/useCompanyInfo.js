@@ -15,5 +15,6 @@ export const useCompanyInfo = (symbol) => {
       }
       return data;
     },
+    staleTime: 5 * 60 * 1000, //5 Minutes
   });
 };

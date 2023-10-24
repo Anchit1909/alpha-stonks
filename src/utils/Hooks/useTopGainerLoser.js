@@ -10,5 +10,6 @@ export const useTopGainerLoser = () => {
       const { data } = await axios.get(URL);
       return data;
     },
+    staleTime: 5 * 60 * 1000, //5 Minutes
   });
 };

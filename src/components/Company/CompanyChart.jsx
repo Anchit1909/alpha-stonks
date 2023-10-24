@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Card } from "../ui/card";
 import { useStockChartData } from "@/utils/Hooks/useStockChartData";
 import StockChart from "./StockChart";
@@ -17,6 +17,8 @@ import { ChartFilter } from "@/utils/ChartFilter";
 // import { ChartData as StockChartRawData } from "@/data/Chart";
 
 const V2CompanyChart = ({ Symbol }) => {
+  const [isMounted, setIsMounted] = useState(false);
+
   const [day, setDay] = useState("1year");
   const [chartType, setChartType] = useState("LineChart");
   const {
@@ -34,6 +36,15 @@ const V2CompanyChart = ({ Symbol }) => {
     () => ChartFilter(day, seriesData),
     [day, seriesData]
   );
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   if (isError) return null;
 
   if (isLoading) return <div>Loading</div>;
