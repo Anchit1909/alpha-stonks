@@ -6,6 +6,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import Header from "./CardHeader";
 import { useDataStore } from "@/utils/Hooks/useStore";
 import { useRouter } from "next/navigation";
+import GainerLoserLoader from "../Preloader/GainerLoserLoader";
 
 const GainerLoser = ({ data, value, isLoading }) => {
   const [selectedValue, setSelectedValue] = useState("price");
@@ -27,7 +28,11 @@ const GainerLoser = ({ data, value, isLoading }) => {
       </CardHeader>
       {isLoading ? (
         <>
-          <div>Loading...</div>
+          {Array(15)
+            .fill(0)
+            .map((_, index) => (
+              <GainerLoserLoader key={index} />
+            ))}
         </>
       ) : (
         <>

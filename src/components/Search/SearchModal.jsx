@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import { useStockSearchData } from "@/utils/Hooks/useStockSearchData";
 import { useDebounce } from "@/utils/Hooks/useDebounce";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
-// import SearchLoader from "../Loader/SearchLoader";
+import SearchLoader from "../Preloader/SearchLoader";
 
 function SearchModal() {
   const Router = useRouter();
@@ -114,7 +114,7 @@ function SearchModal() {
           {value.length === 0 ? (
             <></>
           ) : isLoading ? (
-            <div>Loading</div>
+            <SearchLoader />
           ) : (
             <div className="flex gap-2 mb-2 flex-col p-3">
               <span className="text-sm font-medium">Search Company</span>

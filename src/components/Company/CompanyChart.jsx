@@ -14,6 +14,7 @@ import {
 } from "../ui/select";
 import { ChartDataFormat } from "@/utils/ChartDataFormat";
 import { ChartFilter } from "@/utils/ChartFilter";
+import CompanyChartLoader from "../Preloader/CompanyChartLoader";
 // import { ChartData as StockChartRawData } from "@/data/Chart";
 
 const V2CompanyChart = ({ Symbol }) => {
@@ -47,7 +48,7 @@ const V2CompanyChart = ({ Symbol }) => {
 
   if (isError) return null;
 
-  if (isLoading) return <div>Loading</div>;
+  if (isLoading) return <CompanyChartLoader />;
   return (
     <>
       <Card className="w-full p-4 ">
