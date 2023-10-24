@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
-
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Header from "./CardHeader";
 import { useDataStore } from "@/utils/Hooks/useStore";
 import { useRouter } from "next/navigation";
 import GainerLoserLoader from "../Preloader/GainerLoserLoader";
+import Link from "next/link";
 
 const GainerLoser = ({ data, value, isLoading }) => {
   const [selectedValue, setSelectedValue] = useState("price");
@@ -43,18 +43,18 @@ const GainerLoser = ({ data, value, isLoading }) => {
                   className="flex justify-between items-center border-b dark:border-none dark:pt-6 h-10 px-2"
                   key={ticker}
                 >
-                  <span
+                  <Link
                     className="text-sm font-medium dark:text-white cursor-pointer"
+                    href={`/company/${ticker}`}
                     onClick={() => {
                       setTickerValue(ticker);
                       setTickerPrice(price);
                       setTickerChangePercentage(change_percentage);
                       setGrowthValue(value);
-                      Router.push(`/company/${ticker}`);
                     }}
                   >
                     {ticker}
-                  </span>
+                  </Link>
                   <div className="hidden sm:flex w-1/2 justify-between text-center cursor-pointer">
                     <span className="text-sm font-medium">${price}</span>
                     <span className="text-sm font-medium">{change_amount}</span>

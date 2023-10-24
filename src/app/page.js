@@ -22,7 +22,7 @@ export default function Home() {
         </div>
       </div> */}
       {/* <TabsContainer /> */}
-      <TabsContainer />
+      <V2TabsContainer />
     </main>
   );
 }
