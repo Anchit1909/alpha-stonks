@@ -44,9 +44,10 @@ GrowwStonks is an online platform for stock market data. It shows top-performing
 
 - Javascript
 - [NextJS](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
 - [Alphavantage API](https://www.alphavantage.co/)
+- [Tailwind CSS](https://tailwindcss.com/)
 - [Shadcn ui](https://ui.shadcn.com/)
+- [Zustand](https://github.com/pmndrs/zustand)
 - [React Google Charts](https://www.react-google-charts.com/) (For data visualization)
 
 ## Screenshots
