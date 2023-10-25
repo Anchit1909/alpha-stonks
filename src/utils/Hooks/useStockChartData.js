@@ -13,7 +13,6 @@ export const useStockChartData = (symbol) => {
       } else if (data.Information) {
         throw new Error(data.Information);
       }
-      console.log(data["Weekly Adjusted Time Series"]);
 
       return data;
     },

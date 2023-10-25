@@ -10,12 +10,14 @@ import { useStockSearchData } from "@/utils/Hooks/useStockSearchData";
 import { useDebounce } from "@/utils/Hooks/useDebounce";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import SearchLoader from "../Preloader/SearchLoader";
+import { useDataStore } from "@/utils/Hooks/useStore";
 
 function SearchModal() {
   const Router = useRouter();
   const [value, setValue] = useState("");
   const [selectFilter, setSelectFilter] = useState("all");
   const [open, setOpen] = useState(false);
+  const { searchHistory, addSearchToHistory } = useDataStore();
   const debouncedSearchTerm = useDebounce(value, 500);
   const { data: searchData, isLoading } =
     useStockSearchData(debouncedSearchTerm);
@@ -35,6 +37,7 @@ function SearchModal() {
     setOpen(false);
     command();
   }, []);
+
 
   return (
     <Dialog open={open} onOpenChange={(open) => setOpen(open)}>
@@ -169,6 +172,7 @@ function SearchModal() {
                     <li
                       className="w-full flex justify-between h-10 cursor-pointer hover:bg-secondary rounded-md p-2 items-center"
                       onClick={() => {
+                        addSearchToHistory(item);
                         runCommand(() =>
                           Router.push(`/company/${item["1. symbol"]}`)
                         );
@@ -182,45 +186,25 @@ function SearchModal() {
                 })}
             </div>
           )}
-          {/* <div className="flex gap-2 mb-2 flex-col p-3">
-            <span className="text-sm font-medium">Top Companies</span>
-            <li
-              className="w-full flex justify-between h-10 cursor-pointer hover:bg-secondary rounded-md p-2 items-center"
-              onClick={() => {
-                runCommand(() => Router.push("/company/AAPL"));
-              }}
-            >
-              <TrendingUp className="mr-2 h-4 w-4" />
-              <span>Apple (AAPL)</span>
-            </li>
-            <li
-              className="w-full flex justify-between h-10 cursor-pointer hover:bg-secondary rounded-md p-2 items-center"
-              onClick={() => {
-                runCommand(() => Router.push("/company/MSFT"));
-              }}
-            >
-              <TrendingUp className="mr-2 h-4 w-4" />
-              <span>Microsoft (MSFT)</span>
-            </li>
-            <li
-              className="w-full flex justify-between h-10 cursor-pointer hover:bg-secondary rounded-md p-2 items-center"
-              onClick={() => {
-                runCommand(() => Router.push("/company/AMZN"));
-              }}
-            >
-              <TrendingUp className="mr-2 h-4 w-4" />
-              <span>Amazon (AMZN)</span>
-            </li>
-            <li
-              className="w-full flex justify-between h-10 cursor-pointer hover:bg-secondary rounded-md p-2 items-center"
-              onClick={() => {
-                runCommand(() => Router.push("/company/TSLA"));
-              }}
-            >
-              <TrendingUp className="mr-2 h-4 w-4" />
-              <span>Tesla (TSLA)</span>
-            </li>
-          </div> */}
+          <div className="flex gap-2 mb-2 flex-col p-3">
+            <span className="text-sm font-medium">Recent Search History</span>
+            {searchHistory.map((data) => {
+              return (
+                <li
+                  className="w-full flex justify-between h-10 cursor-pointer hover:bg-secondary rounded-md p-2 items-center"
+                  onClick={() => {
+                    runCommand(() =>
+                      Router.push(`/company/${data["1. symbol"]}`)
+                    );
+                  }}
+                  key={data["1. symbol"] + data["2. name"]}
+                >
+                  <TrendingUp className="mr-2 h-4 w-4" />
+                  <span>{data["2. name"]}</span>
+                </li>
+              );
+            })}
+          </div>
         </div>
       </DialogContent>
     </Dialog>

@@ -6,7 +6,6 @@ import Chart from "react-google-charts";
 
 const StockChart = ({ Symbol, FilteredStockData, ChartType }) => {
   const { theme } = useTheme();
-  console.log(theme);
   const options = {
     legend: {
       textStyle: {
