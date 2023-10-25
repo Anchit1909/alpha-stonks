@@ -1,7 +1,5 @@
-<a href="https://growwstonks-project.vercel.app/">
-  <img alt="Aurius - Ecommerce Website" src="/public/HomePage.png">
+  <img alt="Groww Stonks - stocks/etfs broking website" src="/public/HomePage.png">
     <h1 align="center">Groww Stonks - stocks/etfs broking website</h1>
-</a>
 
 <p align="center">
   Shop for your favourite Stocks/etfs
