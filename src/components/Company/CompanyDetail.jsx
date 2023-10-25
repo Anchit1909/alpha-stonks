@@ -11,7 +11,8 @@ const CompanyDetail = ({ TikerValue }) => {
   const { tickerValue, tickerPrice, tickerChangePercentage, growthValue } =
     useDataStore();
 
-  if (isLoading) return <div className="mx-auto">Loading...</div>;
+  if (isLoading)
+    return <div className="mx-auto text-muted-foreground">Loading...</div>;
 
   return (
     <div className="w-full flex">
