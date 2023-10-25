@@ -9,8 +9,8 @@
   <a href="https://twitter.com/anchit1909" target="_blank">
     <img src="https://img.shields.io/twitter/follow/anchit1909?style=flat&label=anchit1909&logo=twitter&color=0bf&logoColor=fff" alt="Anchit Sinha Twitter follower count" />
   </a>
-  <a href="https://github.com/Anchit1909/aurius-ecommerce-website" target="_blank">
-    <img src="https://img.shields.io/github/stars/Anchit1909/aurius-ecommerce-website?label=Anchit1909%2FAurius" alt="BackToLife repo star count" />
+  <a href="https://github.com/Anchit1909/groww-stonks" target="_blank">
+    <img src="https://img.shields.io/github/stars/Anchit1909/groww-stonks?label=Anchit1909%2FGrowwstonks" alt="Groww Stonks repo star count" />
   </a>
 </p>
 
