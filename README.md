@@ -1,5 +1,5 @@
   <img alt="Groww Stonks - stocks/etfs broking website" src="/public/HomePage.png">
-    <h1 align="center">Groww Stonks - stocks/etfs broking website</h1>
+    <h1 align="center">Alpha Stonks - stocks/etfs broking website</h1>
 
 <p align="center">
   Shop for your favourite Stocks/etfs
@@ -26,7 +26,7 @@
 
 ## Introduction
 
-GrowwStonks is an online platform for stock market data. It shows top-performing and underperforming stocks, offers stock details and financials, and provides Line, Candlestick, and Bar charts. It includes a quick search feature for your favorite stocks.
+AlphaStonks is an online platform for stock market data. It shows top-performing and underperforming stocks, offers stock details and financials, and provides Line, Candlestick, and Bar charts. It includes a quick search feature for your favorite stocks.
 
 ## Features
 
