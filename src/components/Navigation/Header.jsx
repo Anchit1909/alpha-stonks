@@ -1,11 +1,9 @@
 import Link from "next/link";
 import ThemeSwitcher from "../Theme/ThemeSwitcher";
 import MobileHeader from "./MobileHeader";
-import { Input } from "../ui/input";
 import { CandlestickChart, Search } from "lucide-react";
 import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
-import { Button } from "../ui/button";
 import SearchModal from "../Search/SearchModal";
 
 const clash = localFont({
@@ -26,7 +24,7 @@ function Header() {
             >
               <CandlestickChart className="text-primary" />
               <div className={cn(clash.className, "text-xl space-x-1")}>
-                <span>Groww Stonks</span>
+                <span>Alpha Stonks</span>
                 <span className="text-primary">.</span>
               </div>
             </Link>

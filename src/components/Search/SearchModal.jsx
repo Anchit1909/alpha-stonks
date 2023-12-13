@@ -38,7 +38,6 @@ function SearchModal() {
     command();
   }, []);
 
-
   return (
     <Dialog open={open} onOpenChange={(open) => setOpen(open)}>
       <DialogTrigger asChild>

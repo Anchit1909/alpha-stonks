@@ -13,8 +13,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Groww Stonks",
-  description: "Do stock market analysis at Groww Stonks.",
+  title: "Alpha Stonks",
+  description: "Do stock market analysis at Alpha Stonks.",
 };
 
 export default function RootLayout({ children }) {

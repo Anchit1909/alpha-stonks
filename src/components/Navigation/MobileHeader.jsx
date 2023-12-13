@@ -12,17 +12,13 @@ const MobileHeader = () => {
 
   const toggleOpen = () => setOpen((prev) => !prev);
 
+  //to handle header when page is changed.
   const pathname = usePathname();
 
   useEffect(() => {
     if (isOpen) toggleOpen();
   }, [pathname]);
 
-  const closeOnCurrent = (href) => {
-    if (pathname === href) {
-      toggleOpen();
-    }
-  };
   return (
     <div className="sm:hidden">
       <Menu onClick={toggleOpen} className="relative z-50 h-5 w-5" />

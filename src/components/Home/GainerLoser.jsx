@@ -10,7 +10,6 @@ import Link from "next/link";
 
 const GainerLoser = ({ data, value, isLoading }) => {
   const [selectedValue, setSelectedValue] = useState("price");
-  const Router = useRouter();
   const {
     setTickerValue,
     setTickerPrice,
@@ -78,10 +77,12 @@ const GainerLoser = ({ data, value, isLoading }) => {
                       {selectedValue === "change_percentage" && (
                         <div
                           className={`text-sm font-medium flex gap-1 justify-center text-end items-center ${
-                            value === "gainer" ? "text-primary" : "text-red-500"
+                            value === "gainer"
+                              ? "text-green-500"
+                              : "text-red-500"
                           }`}
                         >
-                          <span>{change_percentage}%</span>
+                          <span>{change_percentage}</span>
                           {value === "gainer" ? <ChevronUp /> : <ChevronDown />}
                         </div>
                       )}

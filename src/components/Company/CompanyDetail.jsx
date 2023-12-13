@@ -7,7 +7,7 @@ import { useDataStore } from "@/utils/Hooks/useStore";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const CompanyDetail = ({ TikerValue }) => {
-  const { data: info, isError, isLoading, error } = useCompanyInfo(TikerValue);
+  const { data: info, isError, isLoading } = useCompanyInfo(TikerValue);
   const { tickerValue, tickerPrice, tickerChangePercentage, growthValue } =
     useDataStore();
 
